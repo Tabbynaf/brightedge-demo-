@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BrightEdge Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+        }
+
+        header {
+            background: #12355b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #0b2545;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            padding: 70px 20px;
+            text-align: center;
+            background: #eef5fb;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #12355b;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .services {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .service {
+            flex: 1;
+            min-width: 250px;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #12355b;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #0b2545;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            nav a {
+                display: block;
+                margin: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>BrightEdge Solutions</h1>
+    <p>Smart Digital Solutions for Growing Businesses</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+    <h1>Grow Your Business Online</h1>
+    <p>We help businesses build a strong and professional digital presence.</p>
+    <a href="#contact" class="btn">Get Started</a>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>
+        BrightEdge Solutions provides simple and effective digital solutions
+        for small and growing businesses. Our goal is to help businesses
+        establish a professional online presence.
+    </p>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+
+    <div class="services">
+
+        <div class="service">
+            <h3>Web Design</h3>
+            <p>Modern and responsive websites designed for your business.</p>
+        </div>
+
+        <div class="service">
+            <h3>Business Branding</h3>
+            <p>Professional digital branding to help your business stand out.</p>
+        </div>
+
+        <div class="service">
+            <h3>Digital Support</h3>
+            <p>Technical assistance and digital solutions for your business.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <form onsubmit="sendMessage(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+
+        <input type="email" id="email" placeholder="Your Email" required>
+
+        <textarea id="message" rows="5"
+        placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 BrightEdge Solutions. All Rights Reserved.</p>
+</footer>
+
+<script>
+    function sendMessage(event) {
+        event.preventDefault();
+
+        let name = document.getElementById("name").value;
+
+        alert("Thank you, " + name + "! Your message has been received.");
+    }
+</script>
+
+</body>
+</html>
